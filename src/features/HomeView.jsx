@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { ROUTES } from "../common/constants";
 
 function HomeView() {
+  const baseUrl = import.meta.env.BASE_URL;
+
   return (
     <div id="home-view">
       <section className="headline">
@@ -21,7 +23,7 @@ function HomeView() {
           <img
             className="headline__decoration"
             alt="Decoration"
-            src="images/decoration_headline.png"
+            src={`${baseUrl}images/decoration_headline.png`}
           />
         </div>
       </section>
@@ -37,7 +39,7 @@ function HomeView() {
             <img
               className="advatage-card__image"
               alt="Clean Design"
-              src="images/card-1__advantages.png"
+              src={`${baseUrl}images/card-1__advantages.png`}
             />
             <h4 className="advatage-card__title">Clean Design</h4>
             <p className="advatage-card__description">
@@ -48,7 +50,7 @@ function HomeView() {
             <img
               className="advatage-card__image"
               alt="Secure Data"
-              src="images/card-2__advantages.png"
+              src={`${baseUrl}images/card-2__advantages.png`}
             />
             <h4 className="advatage-card__title">Secure Data</h4>
             <p className="advatage-card__description">
@@ -59,7 +61,7 @@ function HomeView() {
             <img
               className="advatage-card__image"
               alt="Retina Ready"
-              src="images/card-3__advantages.png"
+              src={`${baseUrl}images/card-3__advantages.png`}
             />
             <h4 className="advatage-card__title">Retina Ready</h4>
             <p className="advatage-card__description">

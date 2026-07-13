@@ -1,6 +1,6 @@
 import Layout from "@components/Layout"
 import HomeView from "@features/HomeView"
-import StatsView from "@features/StatsView"
+import StatsView from "@features/StatisticsTable/StatsView"
 import { Route, Routes } from "react-router-dom"
 
 function App() {
