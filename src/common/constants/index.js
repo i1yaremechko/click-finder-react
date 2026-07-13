@@ -1,7 +1,6 @@
 export const ROUTES = {
   HOME: '/',
   USER_STATISTICS: '/users/stats',
-  ERROR: '*',
 };
 
 export const DEFAULT_PAGE = 1;
