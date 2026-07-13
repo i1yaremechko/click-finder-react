@@ -1,0 +1,12 @@
+@use "../common/scss/variables.scss";
+@use "../common/scss/breakpoints.scss";
+@use "../common/scss/reset.scss";
+@use "./header.scss";
+@use "./home.scss";
+@use "./table.scss";
+@use "./pagination.scss";
+@use "./footer.scss";
+@use "./stats.scss";
+@use "./error.scss";
+
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap";
