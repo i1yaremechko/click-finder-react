@@ -1,7 +1,7 @@
+import { ROUTES } from "@common/constants";
 import { Link } from "react-router-dom";
-import { ROUTES } from "../common/constants";
 
-function HomeView() {
+const HomeView = () => {
   const baseUrl = import.meta.env.BASE_URL;
 
   return (

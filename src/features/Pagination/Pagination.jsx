@@ -1,14 +1,15 @@
 import { DEFAULT_PAGE } from '@common/constants';
+import PropTypes from 'prop-types';
 import { getPageRange } from './utils';
 
 const ELLIPSIS = '...';
 
-function Pagination({ currentPage, pagesCount, onPageChange }) {
+const Pagination = ({ currentPage, pagesCount, onPageChange }) => {
   if (pagesCount <= 1) return null;
-
-  const { startPage, endPage } = getPageRange(currentPage, pagesCount);
+  
   const baseUrl = import.meta.env.BASE_URL;
-
+  const { startPage, endPage } = getPageRange(currentPage, pagesCount);
+  
   const handlePageClick = (page) => {
     if (page === currentPage || page < 1 || page > pagesCount) return;
     onPageChange(page);
@@ -79,6 +80,12 @@ function Pagination({ currentPage, pagesCount, onPageChange }) {
       {renderArrow(currentPage + 1, currentPage === pagesCount, 'arrow-right', 'Next')}
     </div>
   );
+}
+
+Pagination.propTypes = {
+  currentPage: PropTypes.number.isRequired,
+  pagesCount: PropTypes.number.isRequired,
+  onPageChange: PropTypes.func.isRequired,
 }
 
 export default Pagination;

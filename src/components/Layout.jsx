@@ -1,7 +1,7 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { ROUTES } from "../common/constants";
 
-function Layout() {
+const Layout = () => {
   const location = useLocation();
   const isMainPage = location.pathname === ROUTES.HOME || location.pathname === `${ROUTES.HOME}/`;
 

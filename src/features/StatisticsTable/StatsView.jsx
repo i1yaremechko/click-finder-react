@@ -5,7 +5,7 @@ import Pagination from '../Pagination/Pagination';
 import { StatisticsGateway } from './gateways';
 import { combineUsersWithStats } from './utils';
 
-function StatsView() {
+const StatsView = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   
   const currentPage = parseInt(searchParams.get('page'), 10) || DEFAULT_PAGE;
@@ -14,12 +14,10 @@ function StatsView() {
   const [users, setUsers] = useState([]);
   const [pagesCount, setPagesCount] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     const loadData = async () => {
       setIsLoading(true);
-      setError(null);
       try {
         const [usersResponse, stats] = await Promise.all([
           StatisticsGateway.fetchUsers(currentPage, rowsPerPage),
@@ -40,7 +38,6 @@ function StatsView() {
         setUsers(finalData);
       } catch (err) {
         console.error(err);
-        setError('Error loading data');
       } finally {
         setIsLoading(false);
       }
@@ -61,7 +58,6 @@ function StatsView() {
 
       <section className="statistic">
         <div className="wrapper wrapper_stat">
-          
           <div className="statistic__breadcrumbs">
             <ul className="statistic__breadcrumbs-list">
               <li className="statistic__breadcrumbs-item">
@@ -93,15 +89,7 @@ function StatsView() {
                 </tr>
               </thead>
               <tbody>
-                {error ? (
-                  <tr>
-                    <td colSpan={8} className="custom-table__empty">{error}</td>
-                  </tr>
-                ) : users.length === 0 && !isLoading ? (
-                  <tr>
-                    <td colSpan={8} className="custom-table__empty">No users found</td>
-                  </tr>
-                ) : (
+                {
                   users.map((user) => (
                     <tr key={user.id}>
                       <td>{user.id}</td>
@@ -113,21 +101,19 @@ function StatsView() {
                       <td>{user.totalClicks}</td>
                       <td>{user.totalPageViews}</td>
                     </tr>
-                  ))
+                  )
                 )}
               </tbody>
             </table>
           </div>
 
-          {!error && (
-            <div id="pagination-container" className='pagination'>
-              <Pagination
-                currentPage={currentPage}
-                pagesCount={pagesCount}
-                onPageChange={handlePageChange}
-              />
-            </div>
-          )}
+          <div id="pagination-container" className='pagination'>
+            <Pagination
+              currentPage={currentPage}
+              pagesCount={pagesCount}
+              onPageChange={handlePageChange}
+            />
+          </div>
         </div>
       </section>
     </div>

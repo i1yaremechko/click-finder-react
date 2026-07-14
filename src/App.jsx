@@ -3,7 +3,7 @@ import HomeView from "@features/HomeView"
 import StatsView from "@features/StatisticsTable/StatsView"
 import { Route, Routes } from "react-router-dom"
 
-function App() {
+const App = () => {
   
   return (
     <Routes>
