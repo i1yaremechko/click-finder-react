@@ -1,4 +1,5 @@
 import { ROUTES } from '@common/constants';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './index.scss';
 
@@ -15,5 +16,9 @@ const Footer = ({ isMainPage }) => (
     </div>
   </footer>
 );
+
+Footer.propTypes = {
+  isMainPage: PropTypes.bool,
+};
 
 export default Footer;

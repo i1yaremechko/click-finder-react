@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '../../common/constants';
 import './index.scss';
@@ -17,6 +18,10 @@ const Header = ({ isMainPage }) => {
       </div>
     </header>
   );
+};
+
+Header.propTypes = {
+  isMainPage: PropTypes.bool,
 };
 
 export default Header;
