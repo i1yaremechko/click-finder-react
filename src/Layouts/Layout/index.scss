@@ -1,41 +1,6 @@
 @use "@common/scss/variables" as *;
 @use "@common/scss/breakpoints" as *;
 
-.header {
-  color: $color-white;
-  z-index: 10;
-  background: $color-primary;
-  align-items: center;
-  gap: 20px;
-  min-height: 72px;
-  display: flex;
-  top: 14px;
-  left: 0;
-  right: 0;
-}
-
-.header__logo {
-  cursor: pointer;
-  margin-bottom: 4px;
-  font-size: 40px;
-  transition-duration: .4s;
-}
-
-.header__logo:hover {
-  color: $color-hover-light;
-}
-
-.header_main {
-  background: 0 0;
-  position: absolute;
-}
-
-.wrapper {
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-}
-
 .page {
   background-color: $color-white;
   flex-direction: column;
@@ -57,6 +22,9 @@
 }
 
 .wrapper {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
   max-width: 1440px;
   margin: 0 auto;
   padding: 16px;

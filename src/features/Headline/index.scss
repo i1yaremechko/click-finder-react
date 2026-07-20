@@ -1,0 +1,78 @@
+@use "@common/scss/variables" as *;
+@use "@common/scss/breakpoints" as *;
+
+.headline {
+  color: $color-white;
+  background: url("data:image/svg+xml,%3csvg%20width='1440'%20height='655'%20viewBox='0%200%201440%20655'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0%200H1440V104.272L1378.2%20217.493C1308.11%20345.888%201173.41%20425.778%201027.02%20425.778H894.837C810.446%20425.778%20728.218%20452.441%20659.915%20501.953L553.869%20578.824C404.575%20687.046%20200.558%20679.249%2059.9767%20559.948L0%20509.05V0Z'%20fill='url(%23paint0_linear_1_186)'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_1_186'%20x1='31'%20y1='68.7909'%20x2='1412.52'%20y2='119.271'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%23255D8B'/%3e%3cstop%20offset='1'%20stop-color='%233A80BA'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e") center bottom / cover no-repeat;
+  min-height: 655px;
+  margin: 0 auto;
+  padding: 140px 0;
+  position: relative;
+}
+
+@include respond-to(desktop) {
+  .headline {
+    padding: 122px 0 0;
+  }
+}
+
+.headline__content {
+  max-width: 586px;
+}
+
+.headline__title {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 58.51px;
+}
+
+.headline__title b {
+  font-weight: 700;
+}
+
+.headline__description {
+  margin: 24px 0 31px;
+  font-size: 20px;
+  line-height: 28.4px;
+}
+
+.headline__button {
+  color: $color-primary;
+  text-transform: none;
+  cursor: pointer;
+  background-color: $color-white;
+  border: none;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 154px;
+  height: 56px;
+  padding-top: 1px;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+}
+
+.headline__button:hover {
+  color: $color-white;
+  background-color: $color-primary;
+}
+
+.headline__decoration {
+  cursor: pointer;
+  transition-duration: .5s;
+  display: none;
+  position: absolute;
+  top: -50px;
+  right: 187px;
+}
+
+@include respond-to(desktop) {
+  .headline__decoration {
+    display: block;
+  }
+}
+
+.headline__decoration:hover {
+  transform: rotate3d(1, 1, 1, 3deg);
+}

@@ -1,18 +1,28 @@
-import Layout from "@components/Layout"
-import HomeView from "@features/HomeView"
-import StatsView from "@features/StatisticsTable/StatsView"
-import { Route, Routes } from "react-router-dom"
+import ErrorPage from "@pages/ErrorPage";
+import MainPage from "@pages/MainPage";
+import UserStatisticsPage from "@pages/UserStatisticsPage";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const App = () => {
-  
-  return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<HomeView />} />
-        <Route path="users/stats" element={<StatsView />} />
-      </Route>
-    </Routes>
-  )
-}
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <MainPage />,
+    },
+    {
+      path: '/users/stats',
+      element: <UserStatisticsPage />,
+    },
+    {
+      path: '*',
+      element: <ErrorPage />,
+    },
+  ],
+  {
+    basename: import.meta.env.BASE_URL,
+  }
+);
+
+const App = () => <RouterProvider router={router} />;
 
 export default App

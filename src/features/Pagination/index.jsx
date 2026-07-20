@@ -1,6 +1,8 @@
 import { DEFAULT_PAGE } from '@common/constants';
 import PropTypes from 'prop-types';
+import './index.scss';
 import { getPageRange } from './utils';
+
 
 const ELLIPSIS = '...';
 

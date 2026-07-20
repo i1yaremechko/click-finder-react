@@ -1,28 +1,4 @@
-@use "../common/scss/variables" as *;
-@use "../common/scss/breakpoints" as *;
-
-.wrapper_stat {
-  flex-direction: column;
-  align-items: baseline;
-  width: 100%;
-  padding: 0;
-}
-
-@include respond-to(desktop) {
-  .wrapper_stat {
-    width: 1180px;
-  }
-}
-
-.statistic {
-  padding: 16px;
-}
-
-@include respond-to(desktop) {
-  .statistic {
-    padding: 16px 0 0;
-  }
-}
+@use "@common/scss/variables" as *;
 
 .statistic__breadcrumbs {
   margin-top: -3px;
@@ -60,10 +36,4 @@
 
 .statistic__link_back {
   color: #ccc;
-}
-
-.statistic__title {
-  margin: 20px 0 16px;
-  font-size: 32px;
-  font-weight: 700;
 }

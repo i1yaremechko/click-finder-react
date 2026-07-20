@@ -1,0 +1,69 @@
+@use "@common/scss/variables" as *;
+@use "@common/scss/breakpoints" as *;
+
+.subscribe {
+  background-image: url("data:image/svg+xml,%3Csvg width='1440' height='183' viewBox='0 0 1440 183' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 183.465H1440V17.965C1440 17.965 1362 17.965 1296.5 6.46497C1231 -5.03503 1071 -1.18733 1023 17.965C975 37.1173 828.5 86.965 768 86.965C566.302 86.965 515.5 34.965 428.5 34.965C341.5 34.965 284 48.965 188 74.465C92 99.965 0 48.965 0 48.965V183.465Z' fill='url(%23paint0_linear_1_187)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_1_187' x1='31.0003' y1='258.787' x2='1400.16' y2='119.346' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23255D8B'/%3E%3Cstop offset='1' stop-color='%233A80BA'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+  background-size: cover;
+  justify-content: center;
+  padding: 26px 16px 93px;
+  display: flex;
+}
+
+@include respond-to(desktop) {
+  .subscribe {
+    padding: 26px 0 93px;
+  }
+}
+
+.subscribe__form {
+  background-color: #fff;
+  border: 1px solid $color-light-gray;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  width: 580px;
+  height: 64px;
+  padding: 4px 3px 4px 19px;
+  transition: border .2s;
+  display: flex;
+}
+
+.subscribe__form:hover {
+  border: 1px solid $color-primary;
+}
+
+.subscribe__input {
+  color: $color-text-main;
+  background: 0 0;
+  border: none;
+  outline: none;
+  flex: 1;
+  height: 100%;
+  font-family: $font-main;
+  font-size: 16px;
+}
+
+.subscribe__input::placeholder {
+  color: $color-text-muted;
+  opacity: .7;
+}
+
+.subscribe__button {
+  color: $color-white;
+  text-transform: none;
+  letter-spacing: .5px;
+  cursor: pointer;
+  background-color: $color-primary;
+  border: none;
+  border-radius: 8px;
+  width: 176px;
+  height: 56px;
+  padding-top: 1px;
+  font-size: 15px;
+  font-weight: 400;
+  transition: background-color .2s;
+}
+
+.subscribe__button:hover {
+  background-color: $color-dark;
+}
