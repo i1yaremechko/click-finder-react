@@ -16,24 +16,26 @@
 
 .statistic {
   padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @include respond-to(desktop) {
   .statistic {
-    padding: 16px 0 0;
+    padding: 20px 0 0;
   }
 }
 
 .statistic__title {
-  margin: 20px 0 16px;
+  margin-bottom: 16px;
   font-size: 32px;
   font-weight: 700;
 }
 
 .table-wrapper {
-  -webkit-overflow-scrolling: touch;
   width: 100%;
   overflow-x: auto;
+  border-radius: 10px;
 }
 
 @include respond-to(desktop) {
