@@ -8,71 +8,67 @@
   margin: 0 auto;
   padding: 140px 0;
   position: relative;
-}
 
-@include respond-to(desktop) {
-  .headline {
+  @include respond-to(desktop) {
     padding: 122px 0 0;
   }
-}
 
-.headline__content {
-  max-width: 586px;
-}
-
-.headline__title {
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 58.51px;
-}
-
-.headline__title b {
-  font-weight: 700;
-}
-
-.headline__description {
-  margin: 24px 0 31px;
-  font-size: 20px;
-  line-height: 28.4px;
-}
-
-.headline__button {
-  color: $color-primary;
-  text-transform: none;
-  cursor: pointer;
-  background-color: $color-white;
-  border: none;
-  border-radius: 8px;
-  justify-content: center;
-  align-items: center;
-  width: 154px;
-  height: 56px;
-  padding-top: 1px;
-  font-size: 16px;
-  font-weight: 400;
-  display: flex;
-}
-
-.headline__button:hover {
-  color: $color-white;
-  background-color: $color-primary;
-}
-
-.headline__decoration {
-  cursor: pointer;
-  transition-duration: .5s;
-  display: none;
-  position: absolute;
-  top: -50px;
-  right: 187px;
-}
-
-@include respond-to(desktop) {
-  .headline__decoration {
-    display: block;
+  &__content {
+    max-width: 586px;
   }
-}
 
-.headline__decoration:hover {
-  transform: rotate3d(1, 1, 1, 3deg);
+  &__title {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 58.51px;
+
+    & b {
+      font-weight: 700;
+    }
+  }
+
+  &__description {
+    margin: 24px 0 31px;
+    font-size: 20px;
+    line-height: 28.4px;
+  }
+
+  &__button {
+    color: $color-primary;
+    text-transform: none;
+    cursor: pointer;
+    background-color: $color-white;
+    border: none;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    width: 154px;
+    height: 56px;
+    padding-top: 1px;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-primary;
+    }
+  }
+
+  &__decoration {
+    cursor: pointer;
+    transition-duration: .5s;
+    display: none;
+    position: absolute;
+    top: -50px;
+    right: 187px;
+
+    @include respond-to(desktop) {
+      display: block;
+    }
+
+    &:hover {
+      transform: rotate3d(1, 1, 1, 3deg);
+    }
+  }
 }

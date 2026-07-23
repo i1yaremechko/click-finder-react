@@ -1,10 +1,10 @@
 import { DEFAULT_PAGE, DEFAULT_ROWS_PER_PAGE } from '@common/constants';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import Pagination from '../Pagination';
+import Pagination from '@features/Pagination';
 import { StatisticsGateway } from './gateways';
-import './index.scss';
 import { combineUsersWithStats } from './utils';
+import './index.scss';
 
 const StatisticsTable = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -54,7 +54,7 @@ const StatisticsTable = () => {
   return (
     <section className="statistic">
       <div className={`linear-progress ${isLoading ? '' : 'hidden'}`} id="global-loader">
-        <div className="linear-progress__bar"></div>
+        <div className="linear-progress__bar" />
       </div>
 
       <h2 className="statistic__title">Users statistics</h2>
@@ -92,9 +92,9 @@ const StatisticsTable = () => {
 
       <div id="pagination-container" className="pagination">
         <Pagination
-          currentPage={currentPage}
-          pagesCount={pagesCount}
-          onPageChange={handlePageChange}
+          page={currentPage}
+          totalPages={pagesCount}
+          onChange={handlePageChange}
         />
       </div>
     </section>

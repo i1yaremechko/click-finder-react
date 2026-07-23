@@ -12,20 +12,20 @@
   top: 14px;
   left: 0;
   right: 0;
-}
 
-.header__logo {
-  cursor: pointer;
-  margin-bottom: 4px;
-  font-size: 40px;
-  transition-duration: .4s;
-}
+  &__logo {
+    cursor: pointer;
+    margin-bottom: 4px;
+    font-size: 40px;
+    transition-duration: .4s;
 
-.header__logo:hover {
-  color: $color-hover-light;
-}
+    &:hover {
+      color: $color-hover-light;
+    }
+  }
 
-.header_main {
-  background: 0 0;
-  position: absolute;
+  &_main {
+    background: 0 0;
+    position: absolute;
+  }
 }

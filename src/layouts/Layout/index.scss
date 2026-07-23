@@ -8,10 +8,8 @@
   margin: 0 auto;
   display: flex;
   position: relative;
-}
 
-@include respond-to(desktop) {
-  .page {
+  @include respond-to(desktop) {
     width: 100%;
   }
 }
@@ -28,17 +26,15 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 16px;
-}
 
-@include respond-to(desktop) {
-  .wrapper {
+  @include respond-to(desktop) {
     width: 100%;
     padding: 0 130px;
   }
-}
 
-.wrapper_headline {
-  position: relative;
+  &_headline {
+    position: relative;
+  }
 }
 
 .linear-progress {
@@ -50,14 +46,14 @@
   background-color: #cce3f5;
   overflow: hidden;
   z-index: 1000;
-}
 
-.linear-progress__bar {
-  width: 100%;
-  height: 100%;
-  background-color: #3a80ba;
-  animation: linearLoading 1.5s infinite ease-in-out;
-  transform-origin: left-center;
+  &__bar {
+    width: 100%;
+    height: 100%;
+    background-color: #3a80ba;
+    animation: linearLoading 1.5s infinite ease-in-out;
+    transform-origin: left-center;
+  }
 }
 
 @keyframes linearLoading {

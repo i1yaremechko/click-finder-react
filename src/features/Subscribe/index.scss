@@ -7,63 +7,61 @@
   justify-content: center;
   padding: 26px 16px 93px;
   display: flex;
-}
 
-@include respond-to(desktop) {
-  .subscribe {
+  @include respond-to(desktop) {
     padding: 26px 0 93px;
   }
-}
 
-.subscribe__form {
-  background-color: #fff;
-  border: 1px solid $color-light-gray;
-  border-radius: 10px;
-  justify-content: space-between;
-  align-items: center;
-  width: 580px;
-  height: 64px;
-  padding: 4px 3px 4px 19px;
-  transition: border .2s;
-  display: flex;
-}
+  &__form {
+    background-color: #fff;
+    border: 1px solid $color-light-gray;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: 580px;
+    height: 64px;
+    padding: 4px 3px 4px 19px;
+    transition: border .2s;
+    display: flex;
 
-.subscribe__form:hover {
-  border: 1px solid $color-primary;
-}
+    &:hover {
+      border: 1px solid $color-primary;
+    }
+  }
 
-.subscribe__input {
-  color: $color-text-main;
-  background: 0 0;
-  border: none;
-  outline: none;
-  flex: 1;
-  height: 100%;
-  font-family: $font-main;
-  font-size: 16px;
-}
+  &__input {
+    color: $color-text-main;
+    background: 0 0;
+    border: none;
+    outline: none;
+    flex: 1;
+    height: 100%;
+    font-family: $font-main;
+    font-size: 16px;
 
-.subscribe__input::placeholder {
-  color: $color-text-muted;
-  opacity: .7;
-}
+    &::placeholder {
+      color: $color-text-muted;
+      opacity: .7;
+    }
+  }
 
-.subscribe__button {
-  color: $color-white;
-  text-transform: none;
-  letter-spacing: .5px;
-  cursor: pointer;
-  background-color: $color-primary;
-  border: none;
-  border-radius: 8px;
-  width: 176px;
-  height: 56px;
-  padding-top: 1px;
-  font-size: 15px;
-  font-weight: 400;
-  transition: background-color .2s;
-}
+  &__button {
+    color: $color-white;
+    text-transform: none;
+    letter-spacing: .5px;
+    cursor: pointer;
+    background-color: $color-primary;
+    border: none;
+    border-radius: 8px;
+    width: 176px;
+    height: 56px;
+    padding-top: 1px;
+    font-size: 15px;
+    font-weight: 400;
+    transition: background-color .2s;
 
-.subscribe__button:hover {
-  background-color: $color-dark;
+    &:hover {
+      background-color: $color-dark;
+    }
+  }
 }

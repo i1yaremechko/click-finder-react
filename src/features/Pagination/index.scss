@@ -46,11 +46,6 @@
   &__arrow {
     border: none;
 
-    .pagination__icon {
-      display: block;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
     &:hover:not(:disabled) {
       .pagination__icon {
         transform: scale(1.1);
@@ -79,5 +74,10 @@
         opacity: 0.25 !important;
       }
     }
+  }
+
+  &__icon {
+    display: block;
+    transition: transform 0.2s ease, opacity 0.2s ease;
   }
 }

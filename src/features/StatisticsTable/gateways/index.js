@@ -1,4 +1,4 @@
-import { DEFAULT_PAGE, DEFAULT_ROWS_PER_PAGE } from '../../../common/constants/index.js';
+import { DEFAULT_PAGE, DEFAULT_ROWS_PER_PAGE } from '@common/constants/index.js';
 
 export const API_URL = 'https://appco-snowy.vercel.app/api';
 

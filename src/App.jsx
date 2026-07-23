@@ -1,27 +1,22 @@
 import ErrorPage from "@pages/ErrorPage";
 import MainPage from "@pages/MainPage";
 import UserStatisticsPage from "@pages/UserStatisticsPage";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 
-const router = createBrowserRouter(
-  [
-    {
-      path: '/',
-      element: <MainPage />,
-    },
-    {
-      path: '/users/stats',
-      element: <UserStatisticsPage />,
-    },
-    {
-      path: '*',
-      element: <ErrorPage />,
-    },
-  ],
+const router = createHashRouter([
   {
-    basename: import.meta.env.BASE_URL,
-  }
-);
+    path: '/',
+    element: <MainPage />,
+  },
+  {
+    path: '/users/stats',
+    element: <UserStatisticsPage />,
+  },
+  {
+    path: '*',
+    element: <ErrorPage />,
+  },
+]);
 
 const App = () => <RouterProvider router={router} />;
 
