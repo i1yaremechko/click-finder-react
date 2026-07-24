@@ -1,9 +1,11 @@
 @use "@common/scss/variables" as *;
 
-.statistic__breadcrumbs {
-  margin-top: 13px;
+.statistic {
+  &__breadcrumbs {
+    margin-top: 13px;
+  }
 
-  &-list {
+  &__breadcrumbs-list {
     align-items: center;
     margin: 0;
     padding: 0;
@@ -11,29 +13,29 @@
     display: flex;
   }
 
-  &-item {
+  &__breadcrumbs-item {
     align-items: center;
     display: flex;
     cursor: pointer;
   }
 
-  &-separator {
+  &__breadcrumbs-separator {
     color: #ccc;
     -webkit-user-select: none;
     user-select: none;
     margin: -2px 7px 0 6px;
     font-size: 24px;
   }
-}
 
-.statistic__link {
-  color: $color-primary;
-  letter-spacing: 0;
-  font-family: $font-main;
-  font-size: 16px;
-  text-decoration: none;
+  &__link {
+    color: $color-primary;
+    letter-spacing: 0;
+    font-family: $font-main;
+    font-size: 16px;
+    text-decoration: none;
 
-  &_back {
-    color: #ccc;
+    &_back {
+      color: #ccc;
+    }
   }
 }

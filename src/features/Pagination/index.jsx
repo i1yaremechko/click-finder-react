@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { getPaginationRange } from './utils';
-import { ELLIPSIS } from './utils/constants';
+import { ELLIPSIS } from './constants';
 import './index.scss';
 
 const Pagination = ({ page, totalPages, onChange }) => {

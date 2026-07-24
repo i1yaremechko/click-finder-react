@@ -2,7 +2,7 @@ import {
   PAGINATION_VISIBLE_ITEMS,
   PAGINATION_EDGE_SPREAD,
   ELLIPSIS
-} from "./constants";
+} from "../constants";
 
 export const getPaginationRange = (curr, total) => {
   const page = Number(curr);
